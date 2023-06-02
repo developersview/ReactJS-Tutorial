@@ -1,13 +1,9 @@
 import React from 'react'
-import { useState } from 'react'
 
-const MyButton = () => {
-    const [count, setCount] = useState(0);
-    const handleClick = () => {
-        setCount(count + 1);
-    }
+const MyButton = ({ count, onClick }) => {
+
     return (
-        <button onClick={handleClick}>
+        <button count={count} onClick={onClick}>
             Clicked {count} times
         </button>
     )
