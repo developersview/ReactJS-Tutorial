@@ -1,9 +1,9 @@
-import './App.css';
-import NavBar from './header/NavBar';
+import NavBar from "./Components/NavBar";
 
 function App() {
   return (
-    <NavBar />
+    <NavBar title="TextUtils" aboutText="About" />
+
   );
 }
 
