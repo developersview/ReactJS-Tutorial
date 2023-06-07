@@ -1,10 +1,10 @@
 import React from 'react'
 
-const MyButton = ({ count, onClick }) => {
+const MyButton = (props) => {
 
     return (
-        <button count={count} onClick={onClick}>
-            Clicked {count} times
+        <button count={props.count} onClick={props.onClick}>
+            Clicked {props.count} times
         </button>
     )
 }
