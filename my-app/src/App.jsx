@@ -2,6 +2,7 @@ import React from 'react';
 import SampleHookPractice from './SampleHookPractice';
 import Learning from './Learning';
 import Person from './Person';
+import Counter from './Counter';
 
 function App() {
 
@@ -12,6 +13,8 @@ function App() {
       <Learning name={''} />
       <br />
       <Person personObj='person1' />
+      <br />
+      <Counter />
     </>
   );
 }
