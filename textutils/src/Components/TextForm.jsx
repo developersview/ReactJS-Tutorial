@@ -6,11 +6,11 @@ const TextForm = (props) => {
     const [text, setText] = useState('Enter text here');
 
     const handleUpperClick = () => {
-        console.log("Uppercase was clicked!");
+        //console.log("Uppercase was clicked!");
         setText(text.toUpperCase());
     }
     const handleLowerClick = () => {
-        console.log("Lowercase was clicked!");
+        //console.log("Lowercase was clicked!");
         setText(text.toLowerCase());
     }
     const handleOnChange = (event) => {
