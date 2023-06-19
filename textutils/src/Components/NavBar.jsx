@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const NavBar = (props) => {
     return (
         <>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="dark" expand="lg" data-bs-theme="dark">
                 <Container fluid>
                     <Navbar.Brand href="#">{props.title}</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
