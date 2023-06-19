@@ -13,9 +13,30 @@ const TextForm = (props) => {
         //console.log("Lowercase was clicked!");
         setText(text.toLowerCase());
     }
+
+    const handleInvertClick = () => {
+        let invertText = '';
+        for (let i = 0; i < text.length; i++) {
+            if (text[i] === text[i].toLowerCase()) {
+                invertText += text[i].toUpperCase();
+            } else if (text[i] === text[i].toUpperCase()) {
+                invertText += text[i].toLowerCase();
+            }
+        }
+        setText(invertText);
+    }
+
+    const handleClearClick = () => {
+        if (window.confirm('Are you sure you want to clear all text?')) {
+            setText('');
+        }
+    }
+
+
     const handleOnChange = (event) => {
         setText(event.target.value);
     }
+
 
     return (
         <>
@@ -33,8 +54,14 @@ const TextForm = (props) => {
                         <Button variant="primary" size="md" onClick={handleUpperClick}>
                             Convert to Uppercase
                         </Button>
-                        <Button variant="warning" size="md" onClick={handleLowerClick}>
+                        <Button variant="secondary" size="md" onClick={handleLowerClick}>
                             Convert to Lowercase
+                        </Button>
+                        <Button variant="success" size="md" onClick={handleInvertClick}>
+                            Invert Cases
+                        </Button>
+                        <Button variant="warning" size="md" onClick={handleClearClick}>
+                            Clear Text
                         </Button>
                     </Stack>
                 </Form>
