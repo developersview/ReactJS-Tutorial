@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const NavBar = (props) => {
     return (
         <>
-            <Navbar bg="dark" expand="lg" data-bs-theme="dark">
+            <Navbar bg={props.mode} expand="lg" data-bs-theme={props.mode}>
                 <Container fluid>
                     <Navbar.Brand href="#">{props.title}</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
@@ -27,18 +27,19 @@ const NavBar = (props) => {
                                 {props.aboutText}
                             </Nav.Link>
                         </Nav>
-                        <Form className="d-flex">
-                            <Form.Control
-                                type="search"
-                                placeholder="Search"
-                                className="me-2"
-                                aria-label="Search"
-                            />
-                            <Button variant="outline-success">Search</Button>
-                        </Form>
                     </Navbar.Collapse>
+                    <Form className={`text-${props.mode === 'light' ? 'dark' : 'light'}`}>
+                        <Form.Check // prettier-ignore
+                            bg='light'
+                            type="switch"
+                            id="custom-switch"
+                            label="Enable Dark Mode"
+                            onClick={props.toggleMode}
+                        />
+                    </Form>
+
                 </Container>
-            </Navbar>
+            </Navbar >
         </>
 
     )

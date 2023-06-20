@@ -41,7 +41,7 @@ const TextForm = (props) => {
     return (
         <>
             <Container>
-                <h3>{props.heading}</h3>
+                <h3 className={`text-${props.mode === 'light' ? 'dark' : 'light'}`}>{props.heading}</h3>
                 <Form>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Control
@@ -71,11 +71,11 @@ const TextForm = (props) => {
                 <div className='p-2'></div>
             </Stack>
             <Container>
-                <h3>You text summary</h3>
-                <p>{text.split(" ").length} words and {text.length} characters</p>
-                <p>{0.008 * text.split(" ").length} Minutes read</p>
-                <h3>Preview</h3>
-                <p>{text}</p>
+                <h3 className={`text-${props.mode === 'light' ? 'dark' : 'light'}`}>You text summary</h3>
+                <p className={`text-${props.mode === 'light' ? 'dark' : 'light'}`}>{text.split(" ").length} words and {text.length} characters</p>
+                <p className={`text-${props.mode === 'light' ? 'dark' : 'light'}`}>{0.008 * text.split(" ").length} Minutes read</p>
+                <h3 className={`text-${props.mode === 'light' ? 'dark' : 'light'}`}>Preview</h3>
+                <p className={`text-${props.mode === 'light' ? 'dark' : 'light'}`}>{text}</p>
             </Container>
 
         </>
