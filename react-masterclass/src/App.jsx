@@ -13,6 +13,7 @@ const App = () => {
 }
 
 const Demo = () => {
+    console.log('Demo Component');
     return (
         <>
             <h2>Demo</h2>
