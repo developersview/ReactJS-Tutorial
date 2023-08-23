@@ -1,22 +1,11 @@
 import React from 'react'
+import Video from './components/Video'
 
 const App = () => {
-    let name = 'Pranoy Chakraborty';
-
     return (
         <>
-            <h2>App</h2>
-            <div className="">{name}</div>
-            <Demo />
-        </>
-    )
-}
-
-const Demo = () => {
-    console.log('Demo Component');
-    return (
-        <>
-            <h2>Demo</h2>
+            <h2>Components</h2>
+            <Video />
         </>
     )
 }
