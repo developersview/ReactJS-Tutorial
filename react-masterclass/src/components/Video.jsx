@@ -15,10 +15,7 @@ const Video = ({ title, channel, views, time, verified }) => {
                     />
                 </div>
                 <div className="title">{title}</div>
-                {verified ?
-                    <div className="channel">{channel} ✅</div>
-                    : <div className="channel">{channel}</div>
-                }
+                <div className="channel">{channel} {verified ? '✅' : null}</div>
                 <div className="views">
                     {views} Views <span>.</span> {time}
                 </div>
