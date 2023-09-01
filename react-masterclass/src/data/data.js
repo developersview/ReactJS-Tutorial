@@ -9,7 +9,7 @@ let videos = [
     },
     {
         id: 2,
-        title: 'Node JS Titorial',
+        title: 'Node JS Tutorial',
         channel: 'JavaScript Mastery',
         views: '454K',
         time: '2 day ago',
@@ -25,7 +25,7 @@ let videos = [
     },
     {
         id: 4,
-        title: 'React JS Titorial',
+        title: 'React JS Tutorial',
         channel: 'CodeEvolution',
         views: '981K',
         time: '1 day ago',

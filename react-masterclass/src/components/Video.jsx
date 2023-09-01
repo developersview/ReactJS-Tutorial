@@ -1,5 +1,6 @@
 import React from 'react'
 import './Video.css'
+import PlayButton from './PlayButton';
 
 const Video = ({ id, title, channel, views, time, verified }) => {
     let topic = 'Components, Props and JSX'
@@ -19,6 +20,7 @@ const Video = ({ id, title, channel, views, time, verified }) => {
                 <div className="views">
                     {views} Views <span>.</span> {time}
                 </div>
+                <PlayButton />
             </div>
         </>
     )
