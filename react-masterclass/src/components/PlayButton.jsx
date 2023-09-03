@@ -1,16 +1,15 @@
 import React from 'react'
 import './PlayButton.css'
 
-const PlayButton = ({ message, name }) => {
+const PlayButton = ({ message, children, onClick }) => {
 
     function handleClick() {
-        alert(message);
-        console.log(message);
+        onClick();
     }
 
     return (
         <>
-            <button onClick={handleClick} className='play'>{name}</button>
+            <button onClick={handleClick} className='play'>{children}</button>
         </>
     )
 }
