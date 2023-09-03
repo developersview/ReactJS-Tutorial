@@ -20,7 +20,8 @@ const Video = ({ id, title, channel, views, time, verified }) => {
                 <div className="views">
                     {views} Views <span>.</span> {time}
                 </div>
-                <PlayButton />
+                <PlayButton name='Play' message='Video will be started playing' />
+                <PlayButton name='Pause' message='Video will be paused' />
             </div>
         </>
     )
