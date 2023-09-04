@@ -17,8 +17,20 @@ const App = () => {
                         channel={item.channel}
                         views={item.views}
                         time={item.time}
-                        verified={item.verified}
-                    />);
+                        verified={item.verified}>
+
+                        <PlayButton
+                            onPlay={() => {
+                                alert(`Playing ${item.title}`);
+                                console.log(`Play button has been clicked for ${item.title}`);
+                            }}
+                            onPause={() => {
+                                window.confirm(`Do you want to stop playing ${item.title}?`);
+                                console.log(`Pause Button has been clicked for ${item.title}`);
+                            }} />
+
+
+                    </Video>);
                 })
             }
         </div>

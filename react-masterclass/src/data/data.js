@@ -1,7 +1,7 @@
 let videos = [
     {
         id: 1,
-        title: 'Chandrayaan - 3',
+        title: 'Chandrayaan-3 Launch',
         channel: 'ISRO Official',
         views: '4.5M',
         time: '1 day ago',
