@@ -7,6 +7,7 @@ const PlayButton = ({ message, children, onPlay, onPause }) => {
 
     function handleClick(e) {
         console.log(e);
+        e.stopPropagation();
         playing === true ? onPause() : onPlay();
         playing = !playing;
     }

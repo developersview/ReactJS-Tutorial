@@ -27,3 +27,14 @@
 .views span {
     padding: 0 0.5em;
 }
+
+@media screen and (max-width:600px) {
+    .container {
+        width: 5rem;
+        height: 20rem;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+}
