@@ -7,7 +7,7 @@ const Counter = () => {
     function handleClick(e) {
         e.stopPropagation();
         setTimeout(() => {
-            setNumber(number + 1);
+            setNumber(number => number + 1);
         }, 2000)
         console.log(number + 1);
     }
