@@ -1,20 +1,25 @@
-import React from 'react'
-import './PlayButton.css'
+import { React, useState } from 'react';
+import './PlayButton.css';
+import PlayCircleFilledTwoToneIcon from '@mui/icons-material/PlayCircleFilledTwoTone';
+import PauseCircleFilledTwoToneIcon from '@mui/icons-material/PauseCircleFilledTwoTone';
 
 const PlayButton = ({ message, children, onPlay, onPause }) => {
 
-    let playing = false;
+    const [playing, setPlaying] = useState(false);
 
     function handleClick(e) {
         console.log(e);
         e.stopPropagation();
         playing === true ? onPause() : onPlay();
-        playing = !playing;
+
+        setPlaying(!playing);
     }
 
     return (
         <>
-            <button onClick={handleClick} className='play'>{playing ? '⏸' : '▶'}</button>
+            <button onClick={handleClick} className='play'>
+                {playing ? <PauseCircleFilledTwoToneIcon /> : <PlayCircleFilledTwoToneIcon />}
+            </button>
         </>
     )
 }

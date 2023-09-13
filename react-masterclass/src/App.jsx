@@ -3,7 +3,7 @@ import Video from './components/Video'
 import './App.css'
 import videos from './data/data'
 import PlayButton from './components/PlayButton'
-import Counter from './components/Counter'
+
 
 const App = () => {
 

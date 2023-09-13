@@ -16,6 +16,6 @@
 }
 
 .play:hover {
-    background-color: transparent;
-    color: rgb(0, 0, 0);
+    background-color: rgba(11, 91, 197, 0.952);
+
 }
