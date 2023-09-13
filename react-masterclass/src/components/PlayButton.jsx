@@ -4,6 +4,7 @@ import PlayCircleFilledTwoToneIcon from '@mui/icons-material/PlayCircleFilledTwo
 import PauseCircleFilledTwoToneIcon from '@mui/icons-material/PauseCircleFilledTwoTone';
 
 const PlayButton = ({ message, children, onPlay, onPause }) => {
+    console.log('Rendering Playbutton');
 
     const [playing, setPlaying] = useState(false);
 

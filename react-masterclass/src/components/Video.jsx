@@ -2,6 +2,7 @@ import React from 'react'
 import './Video.css'
 
 const Video = ({ id, title, channel, views, time, verified, children }) => {
+    console.log('Rendering Videos');
 
     return (
         <>

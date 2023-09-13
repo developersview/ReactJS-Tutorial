@@ -6,7 +6,7 @@ import PlayButton from './components/PlayButton'
 
 
 const App = () => {
-
+    console.log('Rendering App');
     return (
         <div className='App'>
             <h2>Videos App</h2>
