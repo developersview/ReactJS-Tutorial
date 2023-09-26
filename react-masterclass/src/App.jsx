@@ -3,6 +3,7 @@ import Video from './components/Video'
 import './App.css'
 import videos from './data/data'
 import PlayButton from './components/PlayButton'
+import AddVideo from './components/AddVideo'
 
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
     return (
         <div className='App'>
             <h2>Videos App</h2>
+            <AddVideo />
             {
                 videos.map((item, index) => {
                     return (<Video key={index}
