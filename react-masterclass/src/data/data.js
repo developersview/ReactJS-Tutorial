@@ -1,4 +1,4 @@
-let videos = [
+let videoDB = [
     {
         id: 1,
         title: 'Chandrayaan-3 Launch',
@@ -33,4 +33,4 @@ let videos = [
     }
 ]
 
-export default videos;
+export default videoDB;

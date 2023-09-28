@@ -1,17 +1,26 @@
-import React from 'react'
+import { React, useState } from 'react'
 import Video from './components/Video'
 import './App.css'
-import videos from './data/data'
+import videoDB from './data/data'
 import PlayButton from './components/PlayButton'
 import AddVideo from './components/AddVideo'
 
 
 const App = () => {
     console.log('Rendering App');
+    const [videos, setVideos] = useState(videoDB);
+
+    function addVideos(video) {
+        setVideos([
+            ...videos,
+            { ...video, id: videos.length + 1 }
+        ])
+    }
+
     return (
         <div className='App'>
             <h2>Videos App</h2>
-            <AddVideo />
+            <AddVideo onAdd={addVideos}></AddVideo>
             {
                 videos.map((item, index) => {
                     return (<Video key={index}

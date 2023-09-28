@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './AddVideo.css'
 
-const AddVideo = () => {
+const AddVideo = ({ onAdd }) => {
 
     const [video, setVideo] = useState({
         title: 'Space Technology',
@@ -13,6 +13,7 @@ const AddVideo = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        onAdd(video);
         console.log(video);
     }
 
